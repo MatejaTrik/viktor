@@ -4,10 +4,14 @@
          
         .overlay {
             animation: fade-in 300ms ease-in-out forwards;
+            top: 0;
+
         }
     }
 
-    nav {
+    nav { 
+        position: relative;
+        background-color: $white;
         padding: 1.0625rem 1.5rem;
 
     }
@@ -67,6 +71,11 @@
 
         }
 
+        &__menu {
+            background: $white;
+            padding: 1.625rem;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -91,8 +100,17 @@
         color: white;
     }
 
+    &__links {
+
+    }
+
 }
 
+a {
+    color: $darkblue;
+
+}
+ 
 .overlay {
     position: fixed;
     top: 3.75rem;
