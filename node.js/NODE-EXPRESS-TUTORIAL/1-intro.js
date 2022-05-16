@@ -8,4 +8,4 @@ if (amount < 10) {
 
 }
 
-console.log('hey its me first app');
+console.log('hey its me first apppp');

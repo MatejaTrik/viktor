@@ -124,3 +124,43 @@ sync -->
 starts task
 done with the taskstart next one
 ---------------------------
+
+NPM
+1. reuse our code
+2. use code written by others
+3. share our solutions with otehr developers 
+
+
+npm init -y --> sam napravi fajl bez ikakvih pitanja u konzoli a ako nesto hocemo mozemo posle u json fajlu da promenimo 
+===================
+NPM LOADASH =======
+===================
+U SLUCAJU DA NAM SE NE INSTALIRA NODE MODULES IZ PRVE OVIM INSTALLOM DODAMO DEPENDANCIES U JSON PACKAGE I SAMIM TIM  I DOBIJEMO NODE MODULES FOLDER
+
+----------------------------
+EVENT LOOP 
+
+vazna opcija u event loopu jeste OFFLOAD 
+to se koristi u slucaju da treba za vise ljudi da uradim neke taskove ali jedan od tih taskova uzima previse vremena, da ostali ne bi cekali mozemo da offloadujemo taj task i da ga uradimo poslednjeg
+setTimeout(() {
+    console.log(task)
+},0)
+
+iako je interval namesten na 0, i dalje ce task sacekati da svi ostali  zavrse kako bi on krenuo
+----------------------------
+
+EventEmitter je module koji se koristi u interakciji i komunikaciji izmedju objekata u NODEu
+----------------------------
+Streams are used to read 
+Writable
+Readable
+Duplex - do both *write &  read)
+Transform
+
+
+-------------------------------
+HTTP methods
+GET
+POST
+PUT
+DELETE

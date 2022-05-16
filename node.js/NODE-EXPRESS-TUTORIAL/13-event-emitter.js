@@ -1,16 +1,9 @@
-// npm - global command, comes with node
-// npm --version 
+const EventEmitter = require('events')
 
-// local dependency - use it only in this particular project
-// npm i <ime package koji zleimo da instaliramo>
+const customEmitter = new EventEmitter
 
-// gllobal dependancy - use it in any project
-// npm install -g <pacakge name>
-// npm sudo install -g <pacakage name> 
+customEmitter.on('response', () => {
+    console.log('data received');
+})
 
-const _ = require('loadash')
-
-const items = [1, [2, [3, [4]]]]
-const newItems = _.flattenDeep(items)
-
-console.log(newItems);
+customEmitter.emit('response')
