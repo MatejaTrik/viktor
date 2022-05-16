@@ -1,0 +1,166 @@
+environment to run JS outside of browser
+both frontend and backend are included in node
+
+BROWSER vs NODE.JS
+
+BROWSER
+DOM
+Window
+Interactive apps 
+No filesystem 
+fragmentation 
+ES6 Modules
+
+NODE.JS
+no DOM 
+no WINDOW
+Srver side apps
+filesystem
+versions
+commonJS
+
+--------------------------
+REPL
+Node u Terminalu - sluzi da bi evaluatovali nas kod. 
+
+CLI
+Command-Line interfaces
+--> node <IME FAJLA> 
+Tome sluci CLI
+
+
+-------------------------------
+Modules - Encapsulated code (only share minimum)
+every file is module (by default)
+
+MDOULES je exportovanje fajlova 
+
+----------------------------------
+BUIL IN MDOULES
+os 
+path
+fs
+http
+
+
+---------------------------------
+path
+
+BASE method se koristi da bi dosli do krajnjeg cilja tj. poslednjeg fajla unutar Path 
+koristimo je -->
+const base = path.basename(IME FAJLA)
+
+
+ABSOLUTE method koji se koristi kako bi dobili absolute (users/viktor/Desktop...)
+to nam je potrebno jer nismo uvek u istom environmentu
+
+-----------------------------------
+FS - se koristi za write file sync
+
+writeFielSync(
+    'PATH/DO/FAJLA',
+    'TEKST KOJI ZLEIMO DA NAPISEMO',
+    { OPTIONAL objekat 'flag' = koristi se da bi fajl u kome pisemo bio apendovan sa svim rezultatima a a ne overwritovan!}
+)
+
+----------------------------
+kada u async fucntionu hocemo da dodjemo do parametra result to mozemo uraditi sikljucivo unutar te funkcije
+fucntion (err, result) => {
+    if (parametar) {
+
+    }
+
+    RESULT MOZEMO DOBITI ISKLJUCIVO UNUTAR VOIH VITICASTIH ZAGRADA
+
+}
+
+u primeru koji sam radio u 11-fs-async.js 
+
+readFile("./content/first.txt", "utf8", (err, result) => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+    const first = result;
+
+
+  readFile("./content/first.txt", "utf8", (err, result) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    const second = result;
+
+
+    writeFile(
+      "./content/result-async.txt",
+      `here is the result : ${first}, ${second}`,
+      (err, result) => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        console.log(result);
+      }
+    );
+  });
+});
+
+prvo sam pomocu callbacks dobio prvi results i stavio ga pod conts first
+
+onda sam pomocu drugog callbacka dobi odrugi result i stavio ga pod const second
+
+i na kraju sam napisao oba rezultata u ovi fajl!
+
+----------------------------
+sync vs async 
+
+async --> 
+starts taskt
+start next one 
+done with the task
+
+sync -->
+starts task
+done with the taskstart next one
+---------------------------
+
+NPM
+1. reuse our code
+2. use code written by others
+3. share our solutions with otehr developers 
+
+
+npm init -y --> sam napravi fajl bez ikakvih pitanja u konzoli a ako nesto hocemo mozemo posle u json fajlu da promenimo 
+===================
+NPM LOADASH =======
+===================
+U SLUCAJU DA NAM SE NE INSTALIRA NODE MODULES IZ PRVE OVIM INSTALLOM DODAMO DEPENDANCIES U JSON PACKAGE I SAMIM TIM  I DOBIJEMO NODE MODULES FOLDER
+
+----------------------------
+EVENT LOOP 
+
+vazna opcija u event loopu jeste OFFLOAD 
+to se koristi u slucaju da treba za vise ljudi da uradim neke taskove ali jedan od tih taskova uzima previse vremena, da ostali ne bi cekali mozemo da offloadujemo taj task i da ga uradimo poslednjeg
+setTimeout(() {
+    console.log(task)
+},0)
+
+iako je interval namesten na 0, i dalje ce task sacekati da svi ostali  zavrse kako bi on krenuo
+----------------------------
+
+EventEmitter je module koji se koristi u interakciji i komunikaciji izmedju objekata u NODEu
+----------------------------
+Streams are used to read 
+Writable
+Readable
+Duplex - do both *write &  read)
+Transform
+
+
+-------------------------------
+HTTP methods
+GET
+POST
+PUT
+DELETE
