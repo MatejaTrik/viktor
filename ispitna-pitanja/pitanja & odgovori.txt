@@ -1,0 +1,87 @@
+1. Da li postoje tipovi podataka u JS i da li oni moraju biti unapred poznati? 
+    - Strings, Numbers, Booleans, Undefined, Null
+
+2. Koja je razlika izmedju let i var? + primer?
+    - Kada koristimo LET ta variabla postoji samo unutar scopa ili bloka u kom smo trenutno. Dok s druge strane VAR se odnosi na ceo dokument ili celu funkciju
+    Primer: 
+
+    function () {
+        let x = 5
+        var y = 10
+
+        console.log(x, y)   // 5 | 10
+        
+        {
+            let i = 20
+            var j = 25
+
+            console.log(i, j)    // 20 | 25
+
+        }
+        
+        console.log(i, j)   // reference error | 25
+
+    }
+
+
+3. Sta je DOM?
+    - Document Object Model je programerski interfejs za veb dokumente. Prezentuje stranicu pomocu koje programi mogu da menjaju strukturu stil ili kontent dokumenta. DOM prezentuje dokument kao objekte tako bi mogli da programski jezici interaktuju sa stranicom.
+
+4. Sta je undefined? koja je razlika izmedju null i undefined? 
+    - Undefined znaci da je variabla bila deklarovana ali joj nije dat value i dalje.
+    - razlika je sto je null znaci da je value assignovan ali je znaci nista, prazno ili non-existent reference
+
+5. Koji su nacini da se napravi objekat u JS? 
+    - Ima 4 nacina.
+    1. pomocu Literalnih notacija
+    2. koristeci function cunstructor koji sam pravi nove objekte.
+    3. pomocu Object create() metode.
+    4  pomocu cass keyworda sto je maltene isto kao i koriscenje konstraktorske funkcije
+
+6. Koji su sve nacini za definiciju klasi bez ES6 sintakse
+    - NISAM NASAO
+
+7. Koja je razlika između === i == operatora?
+    - dva znaka jednakosti se koriste za comparovanje dve varijable ali se ignorise datatype istih.
+    dok u slucaju koriscenja === se isto komperuju dve varijable ali se proverava i datatype
+
+8. Sta je window objekat?
+    - Window objekat je globalan objekat koji ima svojstva DOM dokumenta. 
+
+9. Sta je callback funkcija?
+    - Bilo koja funkcija koja je pasovana kao argument u drugu funkciju kako bi mogla biti egsekjutovana u toj funckiji naziva se callback funkcija.
+
+10. Koja je razlika izmedju callbakc funckije i promisa?
+    - callback funckiju passujemo unutar druge funkcije koja ce biti pozvana nakon izvrsenja te funkcije. dok u Promise attachujemo callabck  na vracene promise objekte
+
+11. Sta je NaN tip u JS? Kada se on koristi?
+    - NaN znaci Not a Number. koristi se da bi proverili da li je uner broj validan ili je NaN. I preznetuje nevalidan broj.
+
+12. Cemu sluze izuzeci? Kako se strvara i koristi novi izuzetak? Navesti primer koriscenja?
+    - Izuzeci se koriste da bi se handlovali errori i kako bi se zadrzao regularni javascript code. 
+
+    try {
+        console.lo('Hello World')
+    } catch (err) {
+        console.log(err)
+    } // console.lo is not defined
+
+    ali se kod zbog te greske nece zaustaviti i krasovati.
+
+13. Kako se moze napraviti novi DOM element uz pomoc JS?
+    - Pomocu metode document.createElement('X') 
+    na mestu "x" treba da unesemo element koji bismo napravili EG. p, div, h1...
+
+14. Kako se sprovodi enkapsulacija (sakrivanje atributa) objekata u JS?
+    -
+
+15. Da li je moguce da program napisan u JS radi vise stvari istovremeno? ako da kako?
+    - 
+
+16. koja je svrha setTimeout i setInterval? Koji su argumenti neophodni?
+    - setTimeout se koristi kako bi se odlozilo izvrsenje neke funkcije. 
+    - setInterval se koristi kako bi odlozili funkcije koje treba da se ponvaljaju iznova i izonva. 
+    - Neophodni argumenti su samo funkcija. Sve ostalo je opcionalno ukljucujuci i vreme jer ako se ne unese nijedan broj, default vreme je 0. sto ce opet odloziti izvrsenje neke funkcije kako bi se izvrsila nakon druge
+
+17. Kako se moze otkazati vec zapoceti setTimeout?
+    - clearTimeout() Metodom. u zagrade treba ubaciti variablu kojom je deklarovan settimeout.
