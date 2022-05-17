@@ -1,0 +1,35 @@
+(req, res) - parametri su request i response messages 
+| response meessage je ono sto nama server salje |
+| request message je ono sto user salje serveru |
+
+res.writeHead(prima u parametrima status kod i kakav tekst cemo poslati u res.write (tj. da li ce to biti html ili plain text))
+
+tes.wrtie(navodimo stranicu koju zelimo da komp prikaze)
+
+res.end() - nista ne navodimo
+
+
+--------------
+express static je fajl koji sadrzi stvari koje se ne menjaju!
+NPR. css, svg, images etc.
+
+kada hocemo da pokreneemo server sa htmlom i cssom moracemo da iskoristimo USE request
+ i middleware funkciju koja nam pomaze da saljemo fajlove razlciite html stranice zarazlicite user
+app.use(express.static('./public')
+
+svaki fajl koji je staitc ubacimo u folder "public" i expres ce applyovati te fajlove 
+
+static fajlovi su 
+html css svg images cak i JS 
+
+API vs SSR
+API
+sending json data 
+
+
+SSR
+server side redering
+
+--------------------
+route parametar 
+app.get('/folder1/folder2/fajl.html/:ROUTE PARAMETAR)
