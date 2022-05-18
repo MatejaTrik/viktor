@@ -1,0 +1,130 @@
+REPL / CLI?
+    REPL znaci read eval print loop i mozemo doci do njega kada u nasem terminalu ukucamo NODE 
+
+
+    CLI je command line interface. Pomocu toga pokrecemo node aplikacije. 
+
+GLOBALS?
+    radi se o global kmandama koje ce nam polsuziti u toku kursa -->
+    __dirname
+    __filename
+    module 
+
+Modules?
+    modules nam pomaze da ne bi morali da imamo ceo kod u jednom fajlu vec mozemo da ih imamo u vise
+    razlicitih fajlova i da pomocu module.export() exportujemo kod iz drugih fajlova u jedan.
+    require(ime fajla)
+
+alternative syntax?
+    mozemo da exportujemo na razne nacine 
+    module.exports.items = []
+
+    module.exports.IME = ime fajla
+
+Mind grenade?
+    mozemo da exportujemo ceo fajl a ne samo funkcije objekte etc.
+
+Built in modules?
+    OS
+    PATH
+    FS
+    HTTP
+
+
+OS module?
+    i built in modulesi moraju da se requiruju na pocetku
+
+    const os = require('os')
+
+    provajduje nam informacije o operativnom sistemu naseg kompjutera
+    
+Path module?
+    omogucava nam da dodjemo do patha nekog dokumenta. 
+    mozemo doci i do absolta Patha kao i Patha od naseg trenutnog foldera.
+
+FS module?
+    koiristi se za citanje i pisanje fajlova. 
+    tacnije pravljenje funckija koji iscitaju neke informacije i onda ih zapisu negde.
+    (fs.readFyleSync('pathDoFajla', 'encoding language (UTF8)) --> ovom metodom mozemo da 'procitamo' i dodjemo do nekog dokumenta il fajla)
+
+    writeFielSync('pathDoFajla/IME-NOVOG-FAJLA,
+    'STA ZELIMO DA NAPISEMO',
+    { flag : 'a'}) - ce apendovati sve tkestove u isti fajl ||| ukoliko nemamo taj optional objekat onda ce node svaki put overvritovati novi tekst
+
+
+HTTP
+    Pomocu ovog built in modula mozemo arpaviti nas server i pokrenuti ga.
+    const http = require('http)
+    
+    http.createServer
+    server.listen(port na kome ce server da bude)
+
+    res.end(sta zelimo poslati na server kao response)
+
+    app.get ('/about',((req,res) => {
+
+    })
+    )
+
+Global install ?
+    global dependancies (bootstrap etc.)
+    npm install bootstrap
+
+Event loop ? 
+    even loop je non-stop proces koji nadgleda callback queue i call stack
+    ukoliko call stack nije empty event loop ceka dok se to ne desi i tek onda moze da ubaci novu callback funkciju unutar callstacka 
+    iz tog razloga setTimeout 0 ili setInterval 0 odlazu funkciju dok ne dodje do kraja callstacka. jer nakon sto se aktiviria callTimeout ta funckija ide u WEB API a odatle se prosleduje u callback queue i ceka svoj red. 
+
+
+Emitter ?
+    Emitter.emit Se koristi da bi oglasio da se neki event desiok i onda ce to da cuje event.listener i uradi sta je dato u funckiji 
+    ALI 
+    Emitter.on('event koji nam treba', funckija () {} ) 
+
+Streams ?
+    najprostije receno - streams se koriste kako bi readovali ili writovali. 
+
+    Writeable
+    Readable
+    Duplex
+    Transform
+
+HTTP request response cycle ?
+    user napravi request serveru koji posle vraca response.
+
+HTTP messages
+    Request message
+        - user salje
+        - Method || URL || HTTP headhers
+
+    Response message
+        - server salje
+        - HTTP version || status code || status text
+
+HTTP headers ?
+    - saljemo meta data u header sajta. 
+    tj. saljemo kontent type NPR content-type: text/html
+
+
+Express basics ?
+    - Express je module koji NIJE bulit in i normalno mora da se rquireuje na pocetku stranice. uz pomoc njega mozemo lakse da pravimo server
+    , Pathove, requestove etc. 
+
+    app.get == Read data
+    app.post == Insert data
+    app.put == Update data 
+    app.delete == Delete data
+    app.all
+    app.use
+    app.listen
+
+Express static?
+    - Express static sluzi kako bi express umesto nas koristio fajlove i ubaciovao ih.
+    mi treba da napravimo path app.use(express.static('/public'))  --> i onda u public folder ubacimo sve static fajlove i onda ce server umesto nas da setupuje 
+
+API vs SSR 
+    SSR - Server side rendering.
+    API - set of definition and protocols for building and integrating application software.
+
+    API  nam pomaze da komuniciramo sa kmopijuterom ili sistemom i da mu objsanimo sta zelimo kako bi mogli da dobijemo odgovor nazad.
+
