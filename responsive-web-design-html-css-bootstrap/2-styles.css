@@ -1,0 +1,17 @@
+box {
+    background-color: yellow;
+    width: 600px;
+    height: 400px;
+}
+
+.box2 {
+    background-color: pink;
+    width: 400px;
+    height: 250px;
+
+}
+
+.highlight-text {
+    color: dimgrey;
+    font-size: 30px;
+}
