@@ -1,0 +1,52 @@
+flex 1 -->
+je skracenica za tri stvari 
+1. flex-grow: 1
+2. flex-shrink: 1
+3. flex-basis: 0
+
+1. = div ce se rasti u istoj proprociji kao i prozor u kom je otvoren
+2. = div ce se smanjivati u istoj proporciji kao i prozor ..
+3. = div nema starting value (width i height) i uzece onoliko 
+prostora  koliko mu je dozvoljeno - ako su 3 diva u waraperu 
+svaki ce zauzeti 33%
+
+da bi se ova funkcija flexa iskoristila displat flex mora da
+bude na prvom tj. direkntom parentu naseg lementa.
+
+
+GRADIENTs
+
+background-image: X ;
+    X can be lineargradient() circlegradient() 
+    u zagradama treba da neavedemo boje od koje do koje ce gradient
+    ici
+
+rem & em
+
+
+PNG JPEG 
+ png je bolji jer je see-through I mozemo da a shrinkujemo i povecavamo nece se mnogo promeniti kvalitet dok s druge strane jpeg nije see thorugh i kvalitet je jako sensitive
+ 
+ cons PNG je sto je PNG fajl prevelik u odnosu na JPEG i zato moramo da izaberemo sta nam je bitnije u kom trenutku
+
+fontawesome --> adding icons 
+
+rounded corners to a button or div tag 
+border-radius: no. px;
+
+BOX & Text shadow! 
+box-shadiow: (br. br. br. color)
+
+prva tri borja se odnose na ose x y z dok se boja njabolje izrazava u RGBA i onda stavimo poslednji element 'A' dosta manje od 1 da ne bi bilo previse upadljivo
+
+
+backup fajlove dko radimo sajt 
+slecetujemo sve fajlove i compessujemo ih i arhiviramo
+
+umesto HR elemtna mozemo koristi ili bottom border gornjer elementa
+ili top border donjeg elementa 
+u boji lightgray otp 1px 
+
+flexwrap: wrap
+pravimo patern za vise tekstove ili kutija s  tkestom koje ce biti u istom odnosu jedna s drugom
+kao da pravimo place holdere za elemente kako ne bi morali svaki put to manuelno da radimo
