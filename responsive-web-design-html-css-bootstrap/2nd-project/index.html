@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta name="description" content="Contact details for Roar - 57 Moyglare Abbey, Dublin, w23c1k2. Phone +353 5465481">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="./reset.css">
@@ -19,13 +20,102 @@
             </div>
 
             <nav>
-                <a href="#" class="navbutton">Book Online</a>
-                <a href="#" class="navbutton">About</a>
-                <a href="#" class="navbutton">Contact</a>
+                
+                <div class="navbutton">
+                    <a href="#">Book Online</a>
+
+                    <div class="dropdown">
+                        <div class="navbutton">
+                            <a href="#">Onsite Service</a>
+                        </div>
+
+                        <div class="navbutton">
+                            <a href="#">Parts Delivery</a>
+                        </div>
+
+                        <div class="navbutton">
+                            <a href="#">Request Callback</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                
+
+
+
+                <div class="navbutton">
+                    <a href="#">About</a>
+                </div>
+
+                <div class="navbutton">
+                    <a href="#">Contact</a>
+                </div>
 
 
             </nav>
         </header>
+
+
+        <div class="main2">
+
+            <h1>Contact Us</h1>
+            <p>Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you</p>
+
+            <form action="" method="post">
+
+                <div class="inputwrapper">
+                    <label for="name" class="newline">First Name</label>
+                    
+                    <input type="text" name="name" id="name" placeholder="Petar">
+                </div>
+
+                <div class="inputwrapper">
+                    <label for="email" class="newline">First Name</label>
+                    <input type="email" name="email" id="email" placeholder="exapmle@gmail.com">
+                </div>
+
+                <div class="inputwrapper">
+                    <textarea name="message" id="message" cols="100" rows="10" placeholder="Let us know what you think..."></textarea>
+                </div>
+
+                <div class="inputwrapper">
+                    <input type="checkbox" name="emailsub" id="emailsub" value="sign-me-up" checked>
+                    <label for="emailsub">Sign up for Emial Newsletter
+                    </label>
+                </div>
+
+
+                <div class="inputwrapper">
+
+                    <p>How would you like to be contacted?</p>
+                    <input type="radio" name="contactPref" id="phone" value="phone">
+                    <label for="phone" class="margin-right-a">Phone</label>
+
+                    <input type="radio" name="contactPref" id="email2nd">
+                    <label for="email2nd">Email</label>
+
+                </div>
+
+                <div class="inputwrapper">
+
+                    <select name="county" id="county">
+                        <option value="not-chosen">Choose County</option>
+                        <option value="limerick">Limerick</option>
+                        <option value="galway">galway</option>
+                        <option value="Dublin">Dublin</option>
+                    </select>
+
+                </div>
+
+                <input type="submit" value="Fire Away">
+
+            </form>
+
+        </div>
+
+
 
 
         <main>
@@ -93,7 +183,7 @@
                     </p>
                 </div>
 
-                
+
                 <div class="tbox">
                     <p>
                         "This is simply unbelievable! It's exactly what I've been looking for. I would be lost without Roar Cycles. We can't understand how we've been living without Roar Cycles."

@@ -1,8 +1,11 @@
 html {
+    
+    background-image: linear-gradient(#FC5E55, #FA4083);
 }
 
 body {
-    background-image: linear-gradient(#FC5E55, #FA4083);
+    background-image: url();
+    background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 1.125rem;
@@ -36,6 +39,12 @@ main {
     align-items: center;
 }
 
+.main2 {
+    min-height: 300px;
+    padding-top: 50px;
+}
+/*  sve ok  */
+
 .cards {
     display: flex;
     justify-content: space-between;
@@ -44,7 +53,6 @@ main {
 
 .card1 {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-
     min-height: 250px;
     width: 30%;
     background-image: url(./image-background-card1.jpg);
@@ -122,6 +130,11 @@ i {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
+.mybutton:hover {
+    background-color: rgb(29, 213, 103);
+    transition-property: 1;
+}
+
 a.mybutton {
     display: inline-block;
     margin-top: 20px;
@@ -142,7 +155,7 @@ nav .navbutton {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 50px;
+
 }
 
 .tbox {
@@ -151,4 +164,64 @@ nav .navbutton {
     border: 1px solid white;
     box-sizing: border-box;
     margin-top: 50px;
+}
+
+.tbox p:last-of-type {
+    font-size: 0.8rem ;
+    padding-left: 30px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 20px;
+}
+
+.navbutton:hover .dropdown {
+    display: block;
+}
+
+.dropdown .navbutton {
+    width: 120px;
+    background-color: white;
+}
+
+.dropdown .navbutton a {
+    color: #FA4083;
+}
+
+.inputwrapper {
+    margin-bottom: 20px;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    width: 40%;
+    font-size: 0.85rem;
+    font-family: 'Roboto' sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    
+}
+
+.newline {
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+.margin-right-a {
+    margin-right: 20px;
+}
+
+input[type=radio] {
+    margin-right: 10px;
+}
+
+form {
+    margin: 40px 0px;
 }

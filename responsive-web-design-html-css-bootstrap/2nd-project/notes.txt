@@ -50,3 +50,56 @@ u boji lightgray otp 1px
 flexwrap: wrap
 pravimo patern za vise tekstove ili kutija s  tkestom koje ce biti u istom odnosu jedna s drugom
 kao da pravimo place holdere za elemente kako ne bi morali svaki put to manuelno da radimo
+
+
+SELEKTOVANJE CHILDOVA
+
+=================
+PRVI PUT OVO VIDIM
+=================
+
+MOZEMO DA "GADJAMO" svaki drugi dvaki treci ili svaki N-ti element!
+el :nth-child(Xn)
+X treba da bude broj koji zleimo da gadjamo npr. ako zelimo 
+svaki drugi stavim da nam x bude 2 itd itd 
+
+
+DROP DOWN MENU 
+
+(element>element2)*broj  
+koji broj stavimo toliko ce puta da nam napravi taj element
+ili elemente
+
+FORME --->
+
+
+PLACE HOLDERI i LABELS u form elemntima 
+
+ukoiko imamo button koji trebada se klikne ako se npr. slazu
+useri sa terms & conditions mozemo da stavimo 'checked' na kraju
+elementa unutar HTML taga i onda ce to dugme biti checkovano
+cim se stranica ucita! 
+
+TEXT AREA  - prazno polje u kome useri mogu da pisu i salju nam nazad informacije
+
+tickbox se dodaje pomocu --> checkboxa
+
+radio buttons da bi radili tj. da bi mogla da se obelezi samo 
+jedna opcija od njih vise. Buttoni moraju da imaju 
+type="radio" || name"isto" || id="razlicit"
+ukoliko se ispune ta tri uslova moci ce da se obelezi
+samo jedan od ponudjenih
+
+
+kada imamo drop down options --> select
+po defaultu ce prva opcija koju navedemo da se vidi
+ali mozemo da stavimo pored bilo koje od opcije SELECTED i 
+onda ce ta stajati kao default
+
+
+input:date == bira se datum 
+
+
+kada smo u CSSu i zelimo da stajlujemo input mozemo da dodjemo do 
+odredjenog inputa preko 
+input [type=KOJI JE TYPE]
