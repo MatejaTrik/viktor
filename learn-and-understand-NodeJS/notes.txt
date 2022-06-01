@@ -1,0 +1,62 @@
+EVENT:
+somethin that has happened in our app that we can respond to.
+
+==============
+SYSTEM EVENTS
+==============
+
+
+==============
+CUSTOM EVENTS
+==============
+Event Emitter = Custom events in out JS code 
+
+
+============
+ES6 CLASSES
+============
+SYNTACTIC SUGAR FEATURE THAT ONLY CHANGES HOW YOU TYPE SOMETHING, BUT NOTHING CHANGES UNDER THE HOOD 
+
+
+============
+SYNC
+============
+
+============
+ASYNC
+============
+
+
+============
+CALLBACK
+============
+FUNCTION that we pass to some other function that we assume will be invoked at some point
+
+
+============
+LIBUV
+============
+C library made for NODE js kako bi uspele da se ordade non-blocking operacije
+omogucava CPU i ostale resurse da budu korisceni simultaneously
+
+============
+BUFFER
+============
+A temporary holding spot for data being moved from one place to another!
+
+============
+STREAM
+============
+A sequence of data made available over time
+
+============
+BINARY DATA
+============
+Jezik kompjutera - predstavljen u 1 | 0
+
+
+============
+ERROR-FIRST CALLBACK
+============
+CALLBACKs that take aan error objest as their first parameter
+NULL if no error, otherwise will contain an object defininf the error. 
